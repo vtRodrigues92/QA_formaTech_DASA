@@ -1,0 +1,64 @@
+#language: pt
+
+
+# Modelagem dos casos de teste
+
+Funcionalidade:
+	Realizar cadastro
+	
+	Cenário: Realizar cadastro no site de compras.
+		Realizar cadastro para poder realizar o acesso no site.
+		
+		Dado que Victor tenha um e-mail, ele consiga prosseguir o cadastro, inserindo as demais informações;
+		Quando Victor inserir todas as informações, será registrado no banco de dados;
+		Então Victor irá conseguir efetuar o login;
+		E Realizar compras.
+		
+
+Funcionalidade:
+	Realizar login
+	
+	Cenário: Realizar login com um e-mail e senha válido.
+		Após realizar o cadastro, realizar login.
+	
+	Dado que Victor tenha efetuado o cadastro no site de compras com sucesso;
+	Quando Victor inserir o e-mail e senha cadastrado;
+	Então ele conseguirá realizar o login com sucesso;
+	E fazer compras.
+
+
+Funcionalidade:
+	Realizar compra
+	
+	Cenário: Realizar compra de produtos
+		Após fazer cadastro e login no site, realizar compra de 3 itens
+	
+	Dado que Victor tenha efetuado o login no site de compras com sucesso;
+	Quando Victor escolher 3 produtos;
+	E inserir no carrinho;
+	E finalizar a compra indo pro checkout;
+	Então seguir as etapas até a opção de pagamento;
+	Quando Victor seguir para o checkout;
+	E validar se o endereço de entrega foi inserido automaticamente;
+	E validar se o checkbox do endereço de cobrança está marcado;
+	E validar se consegue seguir sem aceitar os termos;
+	E validar a forma de pagamento;
+	E validar a confirmação da ordem de compra;
+	Então ele conseguirá finalizar uma compra.
+	
+	
+Funcionalidade:
+	Página inicial clicando no logo
+	
+	Cenário: Redirecionar para a pagina inicial
+		Logo com a funcionalidade de redirecionar para a pagina inicial
+	
+	Dado que Victor tenha efetuado o login no site de compras com sucesso;
+	E ter navegado até o pagamento;
+	E queira voltar para a pagina inicial;
+	Quando Victor clicar na logo do site;
+	Então ele será redirecionado para a pagina inicial.
+
+	
+
+		
